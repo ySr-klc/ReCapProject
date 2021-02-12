@@ -16,9 +16,10 @@ namespace ConsoleUI
             //BrandTest();
             //ColorTest();
             //CarDtoTest();
-            BrandManager brand = new BrandManager(new EfBrandDal());
-            brand.Add(new Brand { BrandName="Mercedes" });
-
+            //BrandManager brand = new BrandManager(new EfBrandDal());
+            //brand.Add(new Brand { BrandName="Mercedes" });
+            ColorManager colorManager = new ColorManager(new EfColorDal());
+            colorManager.Add(new Color { ColorName = "Red" });
 
 
         }
