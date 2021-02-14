@@ -7,7 +7,7 @@ using Entities.Concrete;
 using System;
 
 namespace ConsoleUI
-{
+{                //Kusura bakmayın şuanlık işler biraz karıştı ama ödev gereksinimlerini karşıladım. gerçi buraya bakarak ne yaptığımı anlmanız biraz zor 
      class Program
     {
         static void Main(string[] args)
@@ -16,11 +16,8 @@ namespace ConsoleUI
             //BrandTest();
             //ColorTest();
             //CarDtoTest();
-            //BrandManager brand = new BrandManager(new EfBrandDal());
-            //brand.Add(new Brand { BrandName="Mercedes" });
-            ColorManager colorManager = new ColorManager(new EfColorDal());
-            colorManager.Add(new Color { ColorName = "Red" });
-
+            RentalManager rental = new RentalManager(new EfRentalDal());
+            rental.Add(new Rental { CarId = 2, CustomerId = 1, RentDate =new DateTime(1919-02-03)});
 
         }
 
