@@ -7,18 +7,54 @@ using Entities.Concrete;
 using System;
 
 namespace ConsoleUI
-{                //Kusura bakmayın şuanlık işler biraz karıştı ama ödev gereksinimlerini karşıladım. gerçi buraya bakarak ne yaptığımı anlmanız biraz zor 
+{
      class Program
     {
         static void Main(string[] args)
         {
+          
+
+
+
+
+            //RentalAddTest();
             //CarTest();
             //BrandTest();
             //ColorTest();
             //CarDtoTest();
-            RentalManager rental = new RentalManager(new EfRentalDal());
-            rental.Add(new Rental { CarId = 2, CustomerId = 1, RentDate =new DateTime(1919-02-03)});
+            //InvalidNameTest();
+        }
 
+        private static void RentalAddTest()
+        {
+            RentalManager rentalManager = new RentalManager(new EfRentalDal());
+
+            var result = rentalManager.Update(new Rental { Id = 1, CarId = 2, CustomerId = 1, ReturnDate = new DateTime(2019, 12, 06) });
+            if (result.Success)
+            {
+                Console.WriteLine(result.Message);
+            }
+            else
+            {
+                Console.WriteLine(result.Message);
+            }
+        }
+
+        private static void InvalidNameTest()
+        {
+            BrandManager brandManager = new BrandManager(new EfBrandDal());
+            var result = brandManager.Add(new Brand { BrandName = "Jeep" });
+            if (result.Success)
+            {
+                
+                
+                    Console.WriteLine(result.Message);
+                
+            }
+            else
+            {
+                Console.WriteLine(result.Message);
+            }
         }
 
         private static void CarDtoTest()
