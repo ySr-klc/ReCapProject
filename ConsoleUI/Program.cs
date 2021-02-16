@@ -8,7 +8,7 @@ using System;
 
 namespace ConsoleUI
 {
-     class Program
+     class Program //Users kısmında eksiklerim var kusura bakmayın ;)
     {
         static void Main(string[] args)
         {
