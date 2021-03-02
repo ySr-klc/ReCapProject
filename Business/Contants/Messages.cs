@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Entites.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -24,5 +25,6 @@ namespace Business.Contants
         public static string UserDeleted = "Kişi silindi ";
         public static string UsersListed = "Kişiler listelendi";
         public static string UserUpdated = "Kişiler güncellendi";
+        public static string UserNotFound = "Kullanıcı bulunamadı";
     }
 }

@@ -2,6 +2,8 @@
 using Business.Contants;
 using Business.ValidationRules.ValidationRules;
 using Core.CrossCuttingConcerns.Validation;
+using Core.Entites.Concrete;
+using Core.Entities.Concrete;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -39,7 +41,17 @@ namespace Business.Concrete
 
         public IDataResult<List<User>> GetById(int id)
         {
-            return new SuccessDataResult<List<User>>(_userDal.GetAll(p=>p.UserId == id),Messages.UsersListed);
+            return new SuccessDataResult<List<User>>(_userDal.GetAll(p=>p.Id == id),Messages.UsersListed);
+        }
+
+        public User GetByMail(string email)
+        {
+            return _userDal.Get(filter: u => u.Email == email);
+        }
+
+        public List<OperationClaim> GetClaims(User user)
+        {
+            return _userDal.GetClaims(user);
         }
 
         public IResult Update(User user)
