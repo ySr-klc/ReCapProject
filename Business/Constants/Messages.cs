@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Business.Contants
+namespace Business.Constants
 {
-    public static class Messages 
+    public static class Messages
     {
         public static string Added = "Başarıyla eklendi";
         public static string Deleted = "Başarıyla silindi";
@@ -24,7 +24,17 @@ namespace Business.Contants
         public static string UserAdded = "Kişi eklendi";
         public static string UserDeleted = "Kişi silindi ";
         public static string UsersListed = "Kişiler listelendi";
-        public static string UserUpdated = "Kişiler güncellendi";
+        public static string UserUpdated = "Kişiler güncellendi";   
         public static string UserNotFound = "Kullanıcı bulunamadı";
+
+        public static string PasswordError = "Şifre hatalı girildi.";
+
+        public static string SuccessfulLogin = "Sisteme giriş başarılı";
+
+        public static string UserAllreadyExixts = "Bu kullanıcı zaten var";
+
+        public static string Userregistered = "Kullanıcı başarıyla kaydedildi";
+
+        public static string AccessTokenCreated = "Access Token oluşturuldu";
     }
 }

@@ -1,5 +1,5 @@
 ﻿using Business.Abstract;
-using Business.Contants;
+using Business.Constants;
 using Business.ValidationRules.ValidationRules;
 using Core.CrossCuttingConcerns.Validation;
 using Core.Entites.Concrete;
