@@ -29,6 +29,11 @@ namespace Business.Concrete
             return new SuccessResult(Messages.Added);
         }
 
+        public IResult AddTransactionalTest(Brand brand)
+        {
+            throw new NotImplementedException();
+        }
+
         public IResult Delete(Brand brand)
         {
             _brandDal.Delete(brand);

@@ -2,6 +2,7 @@
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities;
+using Entities.Concrete;
 using Entities.DTOs;
 using System;
 using System.Collections.Generic;
@@ -9,47 +10,37 @@ using System.Text;
 
 namespace Business.Concrete
 {
-    public class CarImageManager : ICarService
+    public class CarImageManager : ICarImageService
     {
 
-        ICarDal _carDal;
+        ICarImageDal _carImageDal;
 
-        public CarImageManager(ICarDal carDal)
+        public CarImageManager(ICarImageDal carImageDal)
         {
-            _carDal = carDal;
+            _carImageDal = carImageDal;
         }
 
-        public IResult Add(Car car)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IResult Delete(Car car)
+        public IResult Add(CarImage carImage)
         {
             throw new NotImplementedException();
         }
 
-        public IDataResult<List<Car>> GetAll()
+        public IResult Delete(CarImage carImage)
         {
             throw new NotImplementedException();
         }
 
-        public IDataResult<List<Car>> GetByBrandId(int id)
+        public IDataResult<List<CarImage>> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public IDataResult<List<Car>> GetByColorId(int id)
+        public IDataResult<List<CarImage>> GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public IDataResult<List<CarDetailDto>> GetCarDetailDtos()
-        {
-            throw new NotImplementedException();
-        }
-
-        public IResult Update(Car car)
+        public IResult Update(CarImage carImage)
         {
             throw new NotImplementedException();
         }
